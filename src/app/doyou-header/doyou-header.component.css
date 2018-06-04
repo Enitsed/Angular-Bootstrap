@@ -11,19 +11,8 @@
 }
 
 .jumbotron h2 {
-  font : italic 3em fantasy;
-  animation-name: font-bluffer;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
-}
-
-/* 제목 반짝이게 하기 */
-@keyframes font-bluffer {
-  0% { color: darkorange; }
-  25% { color: aqua; }
-  50% { color: burlywood; }
-  75% { color: cornflowerblue; }
-  100% { color: springgreen; }
+  font-size : 3em;
+  font-family: 'Megrim', cursive;
 }
 
 /* 네비게이션 버튼 */
