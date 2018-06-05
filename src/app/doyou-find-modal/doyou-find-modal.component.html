@@ -1,0 +1,24 @@
+<ng-template #find let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">아이디 / 비밀번호 찾기</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="input-group p-1">
+      <label class="input-group-prepend input-group-text">이름</label>
+      <input class="form-control">
+    </div>
+    <div class="input-group p-1">
+      <label class="input-group-prepend input-group-text">이메일주소</label>
+      <input class="form-control">
+    </div>
+    <div class="text-center m-3">
+      <button type="button" class="btn btn-light" (click)="c('Close click')">찾아보기</button>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-light" (click)="c('Close click')">닫기</button>
+  </div>
+</ng-template>

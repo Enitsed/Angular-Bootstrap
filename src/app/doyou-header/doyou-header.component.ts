@@ -8,13 +8,9 @@ import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
 })
 export class DoyouHeaderComponent implements OnInit {
 
-  constructor(private modalService: NgbModal) { }
+  constructor() { }
 
   ngOnInit() {
-  }
-
-  openVerticallyCentered(content) {
-    this.modalService.open(content, { centered: true });
   }
 
 }
