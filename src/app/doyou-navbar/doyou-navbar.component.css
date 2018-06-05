@@ -1,0 +1,31 @@
+nav .collapse ul.nav li {
+  margin: 2px;
+  font-family: 'Nanum Pen Script', cursive;
+}
+
+nav .collapse ul.nav li.active {
+  background-color: #6FC5EE;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+nav .collapse ul.nav li:hover {
+  font-weight: bold;
+  background-color: #f7e1b5;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+nav.navbar {
+  position: relative;
+  bottom: -40px;
+}
+
+@media screen and (min-width: 768px) {
+  div.collapse {
+    position: relative;
+    bottom: -10px;
+  }
+}

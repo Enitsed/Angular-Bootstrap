@@ -1,3 +1,131 @@
-<p>
-  doyou-about works!
-</p>
+<section class="section">
+  <div class="container-fluid p-5">
+    <div class="text-center p-5">
+      <h2>소개</h2>
+    </div>
+  </div>
+</section>
+
+<ngb-carousel *ngIf="images">
+  <ng-template ngbSlide>
+    <img [src]="images[0]" alt="Random first slide">
+    <div class="carousel-caption">
+      <h3>First slide label</h3>
+      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <img [src]="images[1]" alt="Random second slide">
+    <div class="carousel-caption">
+      <h3>Second slide label</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <img [src]="images[2]" alt="Random third slide">
+    <div class="carousel-caption">
+      <h3>Third slide label</h3>
+      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+    </div>
+  </ng-template>
+</ngb-carousel>
+
+
+<section class="section">
+  <div class="container-fluid p-4">
+    <div class="container">
+      <div class="text-center">
+        <h2>
+          방명록
+        </h2>
+      </div>
+      <div class="card-columns">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">
+              Card Title
+            </h4>
+            <h6 class="card-subtitle text-muted">
+              Card subtitle
+            </h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a class="card-link">Card Link</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">
+              Card Title
+            </h4>
+            <h6 class="card-subtitle text-muted">
+              Card subtitle
+            </h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a class="card-link">Card Link</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">
+              Card Title
+            </h4>
+            <h6 class="card-subtitle text-muted">
+              Card subtitle
+            </h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a class="card-link">Card Link</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">
+              Card Title
+            </h4>
+            <h6 class="card-subtitle text-muted">
+              Card subtitle
+            </h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a class="card-link">Card Link</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">
+              Card Title
+            </h4>
+            <h6 class="card-subtitle text-muted">
+              Card subtitle
+            </h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a class="card-link">Card Link</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">
+              Card Title
+            </h4>
+            <h6 class="card-subtitle text-muted">
+              Card subtitle
+            </h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a class="card-link">Card Link</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">
+              Card Title
+            </h4>
+            <h6 class="card-subtitle text-muted">
+              Card subtitle
+            </h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a class="card-link">Card Link</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>

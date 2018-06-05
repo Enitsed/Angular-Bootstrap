@@ -1,0 +1,10 @@
+.container.container-table {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 767px){
+  .btn-group {
+    margin-top: 10px;
+  }
+}
