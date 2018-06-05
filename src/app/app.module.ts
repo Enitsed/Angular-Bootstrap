@@ -11,6 +11,7 @@ import {DoyouBoardComponent} from './doyou-board/doyou-board.component';
 import {DoyouAboutComponent} from './doyou-about/doyou-about.component';
 import {DoyouMainComponent} from './doyou-main/doyou-main.component';
 import {DoyouNavbarComponent} from './doyou-navbar/doyou-navbar.component';
+import {HttpClientModule} from "@angular/common/http";
 
 const doYouRoutes: Routes = [
   { path: 'main', component: DoyouMainComponent},
@@ -34,7 +35,8 @@ const doYouRoutes: Routes = [
   imports: [
     BrowserModule,
     RouterModule.forRoot(doYouRoutes),
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
