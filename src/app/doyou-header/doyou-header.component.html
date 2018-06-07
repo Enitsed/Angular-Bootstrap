@@ -1,8 +1,8 @@
 <div class="jumbotron">
   <div class="btn-group fixed-top justify-content-center">
-    <button class="btn" (click)="openVerticallyCentered(content)">로그인</button>
-    <button class="btn" (click)="openVerticallyCentered(find)">아이디 찾기</button>
-    <button class="btn" (click)="openVerticallyCentered(join)">회원 가입</button>
+    <button class="btn" (click)="openModal('content')">로그인</button>
+    <button class="btn" (click)="openModal('find')">아이디 찾기</button>
+    <button class="btn" (click)="openModal('join')">회원 가입</button>
   </div>
   <a routerLink="main">
     <h2 class="text-lg-center">Crewmate</h2>
@@ -12,3 +12,4 @@
 <app-doyou-login-modal></app-doyou-login-modal>
 <app-doyou-find-modal></app-doyou-find-modal>
 <app-doyou-join-modal></app-doyou-join-modal>
+

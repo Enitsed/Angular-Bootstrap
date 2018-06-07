@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
@@ -7,15 +7,17 @@ import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
   styleUrls: ['./doyou-login-modal.component.css']
 })
 export class DoyouLoginModalComponent implements OnInit {
+  @ViewChild('content')
+  modal: NgbModal;
 
-  constructor(private modalService: NgbModal) { }
+  constructor(private modalService: NgbModal) {
+  }
 
   ngOnInit() {
   }
 
-
-  openVerticallyCentered(content) {
-    this.modalService.open(content, { centered: true });
+  open(){
+    this.modalService.open(this.modal, { centered : true });
   }
 
 }
