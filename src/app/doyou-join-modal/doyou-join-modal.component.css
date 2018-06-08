@@ -1,0 +1,7 @@
+
+/* 모바일 환경 */
+@media screen and (max-width: 768px) {
+.modal-body .input-group .col-md-5 {
+    width: 20%;
+  }
+}

@@ -15,6 +15,8 @@ import {HttpClientModule} from "@angular/common/http";
 import { DoyouLoginModalComponent } from './doyou-login-modal/doyou-login-modal.component';
 import { DoyouFindModalComponent } from './doyou-find-modal/doyou-find-modal.component';
 import { DoyouJoinModalComponent } from './doyou-join-modal/doyou-join-modal.component';
+import {DoyouAuthService} from "./doyou-auth.service";
+import {DoyouAlbumService} from "./doyou-album.service";
 
 const doYouRoutes: Routes = [
   { path: 'main', component: DoyouMainComponent},
@@ -44,7 +46,7 @@ const doYouRoutes: Routes = [
     NgbModule.forRoot(),
     HttpClientModule
   ],
-  providers: [],
+  providers: [DoyouAuthService, DoyouAlbumService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
