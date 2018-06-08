@@ -14,8 +14,6 @@ export class DoyouLoginModalComponent implements OnInit {
   modalRef: NgbModalRef;
   @Input()
   loggedUser: User;
-  @Input()
-  isLogged: boolean;
   @Output()
   parentEmitter = new EventEmitter();
 
@@ -26,9 +24,8 @@ export class DoyouLoginModalComponent implements OnInit {
   }
 
   tryLogin(){
-    this.loggedUser = this.userService.getUser();
-    if(this.loggedUser != null) {
-      this.isLogged = true;
+    if(this.userService.getUser() != null) {
+      this.loggedUser = this.userService.getUser();
     } else {
       return false;
     }
