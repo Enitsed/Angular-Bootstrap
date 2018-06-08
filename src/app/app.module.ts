@@ -19,7 +19,8 @@ import {DoyouFindModalComponent} from './doyou-find-modal/doyou-find-modal.compo
 import {DoyouJoinModalComponent} from './doyou-join-modal/doyou-join-modal.component';
 // 서비스 리스트
 import {DoyouAuthService} from "./doyou-auth.service";
-import {DoyouAlbumService} from "./doyou-album.service";
+import {DoyouAlbumS;
+import { DoyouAboutStickerboardComponent } from './doyou-about-stickerboard/doyou-about-stickerboard.component'ervice} from "./doyou-album.service";
 
 // 라우트 경로 설정
 const doYouRoutes: Routes = [
@@ -41,7 +42,8 @@ const doYouRoutes: Routes = [
     DoyouMainComponent,
     DoyouNavbarComponent,
     DoyouLoginModalComponent,
-    DoyouFindModalComponent,
+    Do,
+    DoyouAboutStickerboardComponentyouFindModalComponent,
     DoyouJoinModalComponent
   ],
   imports: [
