@@ -5,6 +5,11 @@ import {User} from "./user";
 @Injectable({
   providedIn: 'root'
 })
+/*
+    로그인 처리를 위한 서비스.
+    TODO : 서버와 연결하여 유저정보와 관련한 요청을 보내는 역할
+
+ */
 export class DoyouAuthService {
   user: User;
 

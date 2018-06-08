@@ -22,11 +22,9 @@ export class DoyouHeaderComponent implements OnInit {
 
   constructor(private userService: DoyouAuthService) {
   }
-
   ngOnInit() {
-
   }
-
+  // 각각 로그인, 아이디 찾기, 회원가입하기 모달별로 구분하여 실행하게 한다.
   openModal(modal) {
     switch (modal) {
       case 'login' :
@@ -40,18 +38,17 @@ export class DoyouHeaderComponent implements OnInit {
         break;
     }
   }
-
+  // 하위 컴포넌트의에서 유저값을 돌려주는 메서드를 실행 후
+  // 반환 되는 유저 정보를 login 메서드의 인자로 넣어 로그인 처리 한다.
   login($event) {
     this.loggedUser = $event;
     if(this.loggedUser != null) {
       this.isLogged = true;
     }
   }
-
+  // 저장되어 있는 유저정보를 비우고 로그아웃 처리한다.
   logout() {
     this.loggedUser = null;
     this.isLogged = false;
   }
-
-
 }
