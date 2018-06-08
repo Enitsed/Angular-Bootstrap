@@ -1,0 +1,12 @@
+section .container-fluid {
+  height: 100%;
+  min-height: 640px;
+  background-image: url("https://picsum.photos/2000/2000/?50");
+  background-repeat: no-repeat;
+}
+
+.card-body {
+  background: #6bd2e9;
+  border: 1px solid #f6f6ce;
+  border-radius: 50px 0 50px 0;
+}
