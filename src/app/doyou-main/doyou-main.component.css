@@ -1,0 +1,39 @@
+.box {
+  background-color: lemonchiffon;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 10px;
+  min-width: 300px;
+  width: 100%;
+  min-height: 300px;
+}
+
+.box .box_head {
+  background-color: lightblue;
+  border: 1px solid #7d7d7d;
+  left: 25%;
+  margin: 5px;
+  text-align: center;
+  top: -28px;
+  width: 50%;
+  position: relative;
+}
+
+.box .box_body {
+  min-height: 250px;
+  border: 1px solid #1e96fc;
+  margin: 5px;
+}
+
+/* 모바일 환경 */
+@media screen and (max-width: 767px) {
+  .box {
+    width: 100%;
+    display: block;
+    min-height: 100px;
+  }
+
+  .box .box_body {
+    min-height: 120px;
+  }
+}

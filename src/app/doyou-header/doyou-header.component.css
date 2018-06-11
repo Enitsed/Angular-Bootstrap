@@ -5,34 +5,15 @@
 }
 
 /* 헤더 배경화면 */
-.jumbotron {
-  -webkit-background-size: cover;
+.header {
+  width: 100%;
+  min-height: 200px;
+  background-image: url('https://picsum.photos/500/300/?84');
+  background-repeat: no-repeat;
   background-size: cover;
-  margin-bottom: 0px;
 }
-
-.jumbotron a {
-  text-decoration: none;
-}
-
-.jumbotron h2 {
-  font-size : 3em;
-  font-family: 'Sunflower', sans-serif;
-  color: #6699cc;
-  -webkit-transition: transform .3s;
-  -moz-transition: transform .3s;
-  -ms-transition: transform .3s;
-  -o-transition: transform .3s;
-  transition: transform .3s;
-}
-
-.jumbotron h2:hover {
-  font-family: 'Sunflower', sans-serif;
-  color: #6666cc;
-  transform: scale(1.5);
-}
-
+a
 /* 모바일 환경 */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
 
 }
