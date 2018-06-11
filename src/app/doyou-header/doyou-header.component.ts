@@ -19,11 +19,14 @@ export class DoyouHeaderComponent implements OnInit {
   joinModal: DoyouJoinModalComponent;
   isLogged: boolean = false;
   loggedUser: User;
+  user: User;
 
-  constructor(private userService: DoyouAuthService) {
+  constructor() {
   }
+
   ngOnInit() {
   }
+
   // 각각 로그인, 아이디 찾기, 회원가입하기 모달별로 구분하여 실행하게 한다.
   openModal(modal) {
     switch (modal) {
@@ -51,4 +54,5 @@ export class DoyouHeaderComponent implements OnInit {
     this.loggedUser = null;
     this.isLogged = false;
   }
+
 }
