@@ -13,12 +13,32 @@ import {User} from "./user";
 export class DoyouAuthService {
   user: User;
 
-  constructor(httpService: HttpClient) { }
+  constructor(private httpService: HttpClient) { }
 
+  // 로그인 요청
   getUser() {
-    this.user = new User(0, 'a','aa','a@naver.com','2018-06-08','서울시');
-    this.user.userSeq = 1;
+    this.httpService.post('http://localhost:8081/auth/login', this.user, { observe: 'response' }).subscribe(response => {
+      console.log(response);
+    }, error => {
+      console.log(error);
+    });
+    this.user = new User();
     return this.user;
   }
+
+  // 회원가입 요청
+  joinUser(){
+    this.httpService.post('http://localhost:8081', this.user, { observe: 'response' }).subscribe(response => {
+      // console.log(response);
+      if(response.status == 200){
+        // console.log(response);
+      } else {
+        // console.log("회원가입 오류");
+      }
+    }, error => {
+      console.log("서버 요청 오류");
+    });
+  }
+
 
 }

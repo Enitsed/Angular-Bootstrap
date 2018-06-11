@@ -1,5 +1,7 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output, ViewChild} from '@angular/core';
 import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
+import {User} from "../user";
+import {DoyouAuthService} from "../doyou-auth.service";
 
 @Component({
   selector: 'app-doyou-join-modal',
@@ -9,8 +11,10 @@ import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
 export class DoyouJoinModalComponent implements OnInit {
   @ViewChild('join')
   modal: NgbModal;
+  user: User;
 
-  constructor(private modalService: NgbModal) {
+  constructor(private modalService: NgbModal, private authService: DoyouAuthService) {
+    this.user = new User();
   }
 
   ngOnInit() {
@@ -18,6 +22,11 @@ export class DoyouJoinModalComponent implements OnInit {
 
   open(){
     this.modalService.open(this.modal, { centered : true });
+  }
+
+  joinUser(){
+    this.authService.user = this.user;
+    this.authService.joinUser();
   }
 
 }
