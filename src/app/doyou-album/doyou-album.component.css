@@ -7,6 +7,10 @@
   margin-bottom: 10px;
 }
 
+.doyou-album .row .card .card-body {
+  background-color: lightgoldenrodyellow;
+}
+
 p {
   font-family: 'Nanum Pen Script', cursive;
 }

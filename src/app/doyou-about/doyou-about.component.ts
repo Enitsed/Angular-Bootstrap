@@ -15,8 +15,8 @@ export class DoyouAboutComponent implements OnInit {
 
   ngOnInit() {
     // 슬라이더 이미지
-    this.images.push('https://picsum.photos/2000/640/?26');
-    this.images.push('https://picsum.photos/2000/640/?200');
-    this.images.push('https://picsum.photos/2000/640/?275');
+    this.images.push('https://picsum.photos/500/640/?26');
+    this.images.push('https://picsum.photos/500/640/?200');
+    this.images.push('https://picsum.photos/500/640/?275');
   }
 }
