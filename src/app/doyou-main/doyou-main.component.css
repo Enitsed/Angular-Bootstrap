@@ -1,6 +1,6 @@
 .box {
   background-color: lemonchiffon;
-  margin-top: 15px;
+  margin-top: 35px;
   margin-bottom: 15px;
   padding: 10px;
   min-width: 300px;
@@ -11,6 +11,7 @@
 .box .box_head {
   background-color: lightblue;
   border: 1px solid #7d7d7d;
+  font-size: 2em;
   left: 25%;
   margin: 5px;
   text-align: center;

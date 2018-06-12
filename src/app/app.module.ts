@@ -18,6 +18,7 @@ import {DoyouLoginModalComponent} from './doyou-login-modal/doyou-login-modal.co
 import {DoyouFindModalComponent} from './doyou-find-modal/doyou-find-modal.component';
 import {DoyouJoinModalComponent} from './doyou-join-modal/doyou-join-modal.component';
 import {DoyouAboutStickerboardComponent} from './doyou-about-stickerboard/doyou-about-stickerboard.component'
+import {DoyouWriterComponent} from './doyou-writer/doyou-writer.component'
 // 서비스 리스트
 import {DoyouAuthService} from "./doyou-auth.service";
 import {DoyouAlbumService} from "./doyou-album.service";
@@ -28,6 +29,7 @@ const doYouRoutes: Routes = [
   { path: 'album', component: DoyouAlbumComponent},
   { path: 'board', component: DoyouBoardComponent},
   { path: 'about', component: DoyouAboutComponent},
+  { path: 'boardWrite', component: DoyouWriterComponent},
   { path: '', redirectTo: '/main', pathMatch: 'full' }
 ];
 
@@ -44,6 +46,7 @@ const doYouRoutes: Routes = [
     DoyouLoginModalComponent,
     DoyouFindModalComponent,
     DoyouAboutStickerboardComponent,
+    DoyouWriterComponent,
     DoyouJoinModalComponent
   ],
   imports: [
