@@ -148,12 +148,12 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 // 라우트 경로 설정
 var doYouRoutes = [
-    { path: 'main', component: _doyou_main_doyou_main_component__WEBPACK_IMPORTED_MODULE_12__["DoyouMainComponent"] },
-    { path: 'album', component: _doyou_album_doyou_album_component__WEBPACK_IMPORTED_MODULE_9__["DoyouAlbumComponent"] },
-    { path: 'board', component: _doyou_board_doyou_board_component__WEBPACK_IMPORTED_MODULE_10__["DoyouBoardComponent"] },
-    { path: 'about', component: _doyou_about_doyou_about_component__WEBPACK_IMPORTED_MODULE_11__["DoyouAboutComponent"] },
-    { path: 'boardWrite', component: _doyou_writer_doyou_writer_component__WEBPACK_IMPORTED_MODULE_18__["DoyouWriterComponent"] },
-    { path: '', redirectTo: '/main', pathMatch: 'full' }
+    { path: 'Angular-Bootstrap/main', component: _doyou_main_doyou_main_component__WEBPACK_IMPORTED_MODULE_12__["DoyouMainComponent"] },
+    { path: 'Angular-Bootstrap/album', component: _doyou_album_doyou_album_component__WEBPACK_IMPORTED_MODULE_9__["DoyouAlbumComponent"] },
+    { path: 'Angular-Bootstrap/board', component: _doyou_board_doyou_board_component__WEBPACK_IMPORTED_MODULE_10__["DoyouBoardComponent"] },
+    { path: 'Angular-Bootstrap/about', component: _doyou_about_doyou_about_component__WEBPACK_IMPORTED_MODULE_11__["DoyouAboutComponent"] },
+    { path: 'Angular-Bootstrap/boardWrite', component: _doyou_writer_doyou_writer_component__WEBPACK_IMPORTED_MODULE_18__["DoyouWriterComponent"] },
+    { path: 'Angular-Bootstrap/', redirectTo: 'Angular-Bootstrap/main', pathMatch: 'full' }
 ];
 var AppModule = /** @class */ (function () {
     function AppModule() {
@@ -1100,7 +1100,7 @@ module.exports = "nav .collapse ul.nav li {\r\n  margin: 2px;\r\n  font-family: 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-expand-md navbar-light justify-content-end\">\n  <button class=\"navbar-toggler\" type=\"button\" (click)=\"toggleNav()\">\n    <span class=\"navbar-toggler-icon\"></span>\n  </button>\n\n  <div class=\"collapse navbar-collapse\" [ngClass]=\"{ 'show': isShow }\">\n    <ul class=\"nav navbar-nav mr-auto text-center\">\n      <li class=\"nav-item\" routerLinkActive=\"active\">\n        <a class=\"nav-link\" routerLink=\"main\">Home <span class=\"sr-only\">(current)</span></a>\n      </li>\n      <li class=\"nav-item\" routerLinkActive=\"active\">\n        <a class=\"nav-link\" routerLink=\"album\">album</a>\n      </li>\n      <li class=\"nav-item\" routerLinkActive=\"active\">\n        <a class=\"nav-link\" routerLink=\"board\">board</a>\n      </li>\n      <li class=\"nav-item\" routerLinkActive=\"active\">\n        <a class=\"nav-link\" routerLink=\"about\">About Us</a>\n      </li>\n    </ul>\n    <form class=\"form-inline my-2 my-lg-0 justify-content-center\">\n      <input class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">\n      <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>\n    </form>\n  </div>\n</nav>\n"
+module.exports = "<nav class=\"navbar navbar-expand-md navbar-light justify-content-end\">\n  <button class=\"navbar-toggler\" type=\"button\" (click)=\"toggleNav()\">\n    <span class=\"navbar-toggler-icon\"></span>\n  </button>\n\n  <div class=\"collapse navbar-collapse\" [ngClass]=\"{ 'show': isShow }\">\n    <ul class=\"nav navbar-nav mr-auto text-center\">\n      <li class=\"nav-item\" routerLinkActive=\"active\">\n        <a class=\"nav-link\" routerLink=\"Angular-Bootstrap/main\">Home <span class=\"sr-only\">(current)</span></a>\n      </li>\n      <li class=\"nav-item\" routerLinkActive=\"active\">\n        <a class=\"nav-link\" routerLink=\"Angular-Bootstrap/album\">album</a>\n      </li>\n      <li class=\"nav-item\" routerLinkActive=\"active\">\n        <a class=\"nav-link\" routerLink=\"Angular-Bootstrap/board\">board</a>\n      </li>\n      <li class=\"nav-item\" routerLinkActive=\"active\">\n        <a class=\"nav-link\" routerLink=\"Angular-Bootstrap/about\">About Us</a>\n      </li>\n    </ul>\n    <form class=\"form-inline my-2 my-lg-0 justify-content-center\">\n      <input class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">\n      <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>\n    </form>\n  </div>\n</nav>\n"
 
 /***/ }),
 
