@@ -5,3 +5,20 @@ section .container-fluid {
   background-repeat: no-repeat;
 }
 
+/deep/ .carousel-item img {
+  width: 100%;
+  min-height: 640px;
+}
+
+@media screen and (max-width: 767px){
+  section .container-fluid {
+    height: 100%;
+    min-height: 700px;
+    background-image: url("https://picsum.photos/400/900/?1");
+    background-repeat: no-repeat;
+  }
+
+
+
+}
+

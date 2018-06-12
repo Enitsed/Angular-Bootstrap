@@ -1,0 +1,71 @@
+.box {
+  background-color: lemonchiffon;
+  margin-top: 35px;
+  margin-bottom: 15px;
+  padding: 10px;
+  min-width: 300px;
+  width: 100%;
+  min-height: 300px;
+}
+
+.box .box_head {
+  background-color: lightblue;
+  border: 1px solid #7d7d7d;
+  font-size: 2em;
+  left: 25%;
+  margin: 5px;
+  text-align: center;
+  top: -28px;
+  width: 50%;
+  position: relative;
+}
+
+.box .box_body {
+  min-height: 250px;
+  border: 1px solid #1e96fc;
+  margin: 5px;
+}
+
+.box .box_body thead th:nth-child(1){
+  width: 30%;
+}
+.box .box_body thead th:nth-child(2){
+  width: 40%;
+  height: 33px !important;
+  overflow: hidden;
+}
+.box .box_body thead th:nth-child(3){
+  width: 15%;
+}
+.box .box_body thead th:nth-child(4){
+  width: 15%;
+}
+
+
+
+/* 모바일 환경 */
+@media screen and (max-width: 767px) {
+  .box {
+    width: 100%;
+    display: block;
+    min-height: 100px;
+  }
+
+  .box .box_body {
+    min-height: 120px;
+  }
+
+  .box .box_body thead th:nth-child(1){
+    width: 20%;
+  }
+  .box .box_body thead th:nth-child(2){
+    width: 35%;
+  }
+  .box .box_body thead th:nth-child(3){
+    width: 20%;
+  }
+  .box .box_body thead th:nth-child(4){
+    width: 25%;
+  }
+
+}
