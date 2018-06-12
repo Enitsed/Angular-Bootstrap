@@ -25,12 +25,12 @@ import {DoyouAlbumService} from "./doyou-album.service";
 
 // 라우트 경로 설정
 const doYouRoutes: Routes = [
-  { path: 'Angular-Bootstrap/main', component: DoyouMainComponent},
-  { path: 'Angular-Bootstrap/album', component: DoyouAlbumComponent},
-  { path: 'Angular-Bootstrap/board', component: DoyouBoardComponent},
-  { path: 'Angular-Bootstrap/about', component: DoyouAboutComponent},
-  { path: 'Angular-Bootstrap/boardWrite', component: DoyouWriterComponent},
-  { path: 'Angular-Bootstrap/', redirectTo: 'Angular-Bootstrap/main', pathMatch: 'full' }
+  { path: 'main', component: DoyouMainComponent},
+  { path: 'album', component: DoyouAlbumComponent},
+  { path: 'board', component: DoyouBoardComponent},
+  { path: 'about', component: DoyouAboutComponent},
+  { path: 'boardWrite', component: DoyouWriterComponent},
+  { path: '', redirectTo: '/main', pathMatch: 'full' }
 ];
 
 @NgModule({
