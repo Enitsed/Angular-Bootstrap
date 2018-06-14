@@ -16,8 +16,9 @@ export class DoyouAuthService {
   constructor(private httpService: HttpClient) { }
 
   // 로그인 요청
-  getUser() {
+  getUser(loggedUser) {
     this.httpService.post('http://localhost:8081/auth/login', this.user, { observe: 'response' }).subscribe(response => {
+//      if (loggedUser.id != response.)
       console.log(response);
     }, error => {
       console.log(error);

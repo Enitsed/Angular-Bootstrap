@@ -35,11 +35,11 @@ export class DoyouLoginModalComponent implements OnInit {
   }
 
   // 로그인 시도 메서드
-  signIn(){
+  signIn(loggedUser){
     // 유저서비스에서 서버와 통신 후 가져오는 유저 값이 없으면 false를 리턴하고,
     // 정상 처리시 유저 정보 반환한다.
-    if(this.userService.getUser() != null) {
-      this.loggedUser = this.userService.getUser();
+    if(this.userService.getUser(loggedUser) != null) {
+      this.loggedUser = this.userService.getUser(loggedUser);
     } else {
       return false;
     }
