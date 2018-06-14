@@ -7,7 +7,7 @@
 /* 헤더 배경화면 */
 .header {
   width: 100%;
-  min-height: 200px;
+  min-height: 380px;
   background-image: url('https://picsum.photos/500/300/?84');
   background-repeat: no-repeat;
   background-size: cover;
