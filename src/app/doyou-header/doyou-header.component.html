@@ -9,8 +9,8 @@
   </div>
 
   <a routerLink="main">
-    <h2 class="text-lg-center" *ngIf="loggedUser != null">{{ loggedUser.name }} 님 어서오세요.</h2>
-    <h2 class="text-lg-center" *ngIf="loggedUser == null">Crewmate</h2>
+    <h2 class="text-lg-left" *ngIf="loggedUser != null">{{ loggedUser.name }} 님 어서오세요.</h2>
+    <h2 class="text-lg-left" *ngIf="loggedUser == null">Crewmate</h2>
   </a>
   <app-doyou-navbar></app-doyou-navbar>
 </div>
