@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpParams} from "@angular/common/http";
 import {User} from "./user";
 
 @Injectable({
@@ -8,7 +8,6 @@ import {User} from "./user";
 /*
     로그인 처리를 위한 서비스.
     TODO : 서버와 연결하여 유저정보와 관련한 요청을 보내는 역할
-
  */
 export class DoyouAuthService {
   user: User;
@@ -17,13 +16,14 @@ export class DoyouAuthService {
 
   // 로그인 요청
   getUser(loggedUser) {
-    this.httpService.post('http://localhost:8081/auth/login', this.user, { observe: 'response' }).subscribe(response => {
+    const body = new HttpParams().set('userId', loggedUser.userId).set('userPw', loggedUser.userPw);
+
+    this.httpService.post('http://localhost:8081/auth/login', body, { observe: 'response' }).subscribe(response => {
 //      if (loggedUser.id != response.)
       console.log(response);
     }, error => {
       console.log(error);
     });
-    this.user = new User();
     return this.user;
   }
 
