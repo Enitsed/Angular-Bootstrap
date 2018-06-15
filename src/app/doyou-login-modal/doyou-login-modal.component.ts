@@ -32,19 +32,23 @@ export class DoyouLoginModalComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.loggedUser = new User();
   }
 
   // 로그인 시도 메서드
-  signIn(loggedUser){
+  signIn(){
     // 유저서비스에서 서버와 통신 후 가져오는 유저 값이 없으면 false를 리턴하고,
     // 정상 처리시 유저 정보 반환한다.
-    if(this.userService.getUser(loggedUser) != null) {
-      this.loggedUser = this.userService.getUser(loggedUser);
+    if(this.userService.getUser(this.loggedUser) != null) {
+      this.loggedUser = this.userService.getUser(this.loggedUser);
     } else {
       return false;
     }
+
     // 부모에게 데이터를 전달하기 위해 EventEmitter객체를 통해 emit한다.
     this.parentEmitter.emit(this.loggedUser);
+    console.log(this.loggedUser);
+
     // 모달창을 닫는다.
     this.modalRef.close();
   }
