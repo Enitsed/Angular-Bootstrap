@@ -40,6 +40,7 @@ export class DoyouAuthService {
   joinUser(){
     // SPA의 이점을 살리기위해서 폼 전송을 사용하지 않고 폼에서 값만 가져와서
     // HTTP 요청을 해야한다.
+    // JSON.stringify(this.user); 이렇게 보낼 수도 있다
     const body = new HttpParams().set('userId', this.user.userId).set('userPw', this.user.userPw).set('name', this.user.name).set('gender', this.user.gender).set('email', this.user.email).set('address', this.user.address);
     this.httpService.post('http://localhost:8081/join/userJoin', body, { observe: 'response' }).subscribe(response => {
       console.log(response);
