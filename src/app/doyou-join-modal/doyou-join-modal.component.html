@@ -6,30 +6,30 @@
     </button>
   </div>
   <div class="modal-body">
-    <form #signupForm="ngForm">
+    <form #f="ngForm">
       <div class="input-group p-1">
         <label class="input-group-prepend input-group-text">아이디</label>
-        <input class="form-control" type="text" [ngModel]="user.userId" name="userId">
+        <input class="form-control" type="text" name="userId" ngModel required [minlength]="3">
       </div>
       <div class="input-group p-1">
         <label class="input-group-prepend input-group-text">비밀번호</label>
-        <input class="form-control" type="password" [ngModel]="user.userPw" name="userPw">
+        <input class="form-control" type="password" name="userPw" ngModel required [minlength]="4">
       </div>
       <div class="input-group p-1">
         <label class="input-group-prepend input-group-text">이름</label>
-        <input class="form-control" type="text" [ngModel]="user.name" name="name">
+        <input class="form-control" type="text" name="name" ngModel required [minlength]="3">
       </div>
       <div class="form-check-inline d-flex justify-content-around p-1 input-group">
           <div class="input-group align-items-center justify-content-between">
             <label class="input-group-text">성별</label>
             <div class="col-md-5">
-              <input class="form-check-input" type="radio" name="gender" id="man" value="man" [ngModel]="user.gender" checked>
+              <input class="form-check-input" type="radio" name="gender" id="man" value="man" ngModel checked>
               <label class="form-check-label" for="man">
                 남자
               </label>
             </div>
             <div class="col-md-5">
-              <input class="form-check-input" type="radio" name="gender" id="woman" value="woman" [ngModel]="user.gender">
+              <input class="form-check-input" type="radio" name="gender" id="woman" value="woman" ngModel>
               <label class="form-check-label" for="woman">
                 여자
               </label>
@@ -38,17 +38,17 @@
       </div>
       <div class="input-group p-1">
         <label class="input-group-prepend input-group-text">이메일주소</label>
-        <input class="form-control" type="email" [ngModel]="user.email" name="email" required
+        <input class="form-control" type="email" name="email" ngModel required
                pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?">
       </div>
       <div class="input-group p-1">
         <label class="input-group-prepend input-group-text">주소</label>
-        <input class="form-control" type="text" [ngModel]="user.address" name="address">
+        <input class="form-control" type="text" name="address" ngModel>
       </div>
     </form>
   </div>
   <div class="modal-footer">
-    <button type="button" class="btn btn-light" (click)="joinUser()">회원가입</button>
+    <button type="button" class="btn btn-light" (click)="joinUser(f)" [disabled]="!f.form.valid">회원가입</button>
     <button type="button" class="btn btn-light" (click)="c('Close click')">닫기</button>
   </div>
 </ng-template>
