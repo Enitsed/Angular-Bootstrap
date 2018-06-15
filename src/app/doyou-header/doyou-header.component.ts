@@ -17,11 +17,8 @@ export class DoyouHeaderComponent implements OnInit {
   findModal: DoyouFindModalComponent;
   @ViewChild(DoyouJoinModalComponent)
   joinModal: DoyouJoinModalComponent;
-  isLogged: boolean = false;
-  loggedUser: User;
-  user: User;
 
-  constructor() {
+  constructor(private userService: DoyouAuthService) {
   }
 
   ngOnInit() {
@@ -41,18 +38,11 @@ export class DoyouHeaderComponent implements OnInit {
         break;
     }
   }
-  // 하위 컴포넌트의에서 유저값을 돌려주는 메서드를 실행 후
-  // 반환 되는 유저 정보를 login 메서드의 인자로 넣어 로그인 처리 한다.
-  login($event) {
-    this.loggedUser = $event;
-    if(this.loggedUser != null) {
-      this.isLogged = true;
-    }
-  }
+
   // 저장되어 있는 유저정보를 비우고 로그아웃 처리한다.
   logout() {
-    this.loggedUser = null;
-    this.isLogged = false;
+    this.userService.user = null;
+    this.userService.isLogged = false;
   }
 
 }

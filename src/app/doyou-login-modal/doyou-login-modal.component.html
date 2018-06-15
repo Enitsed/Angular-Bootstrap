@@ -6,12 +6,11 @@
     </button>
   </div>
   <div class="modal-body">
-    <form>
     <div class="p-1 align-items-center">
       <div class="input-group">
         <label class="input-group-prepend input-group-text" type="text">아이디</label>
-        <input class="form-control" name="userId" [(ngModel)]="loggedUser.userId">
-        <span>{{loggedUser.userId}}</span>
+        <input class="form-control" name="userId" [(ngModel)]="userService.user.userId">
+        <span>{{userService.user.userId}}</span>
       </div>
       <div class="form-check col-md-2">
         <input class="form-check-input" type="checkbox" id="inlineFormCheck">
@@ -22,10 +21,9 @@
     </div>
     <div class="input-group p-1">
       <label class="input-group-prepend input-group-text">비밀번호</label>
-      <input class="form-control" type="password" name="userPw" [(ngModel)]="loggedUser.userPw">
-      <span>{{loggedUser.userPw}}</span>
+      <input class="form-control" type="password" name="userPw" [(ngModel)]="userService.user.userPw">
+      <span>{{userService.user.userPw}}</span>
     </div>
-    </form>
   </div>
   <div class="modal-footer">
     <button type="button" class="btn btn-light" (click)="signIn()">로그인</button>

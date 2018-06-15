@@ -21,10 +21,8 @@ export class DoyouLoginModalComponent implements OnInit {
   @ViewChild('login')
   modal: NgbModal;
   modalRef: NgbModalRef;
-  @Input()
-  loggedUser: User;
-  @Output()
-  parentEmitter = new EventEmitter();
+  userId: string;
+  userPw: string;
 
   // 모달창 활성을 위한 modalService와 유저 인증을 위한 authService를
   // DI를 통해 주입한다.
@@ -32,22 +30,18 @@ export class DoyouLoginModalComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.loggedUser = new User();
   }
 
   // 로그인 시도 메서드
   signIn(){
     // 유저서비스에서 서버와 통신 후 가져오는 유저 값이 없으면 false를 리턴하고,
     // 정상 처리시 유저 정보 반환한다.
-    if(this.userService.getUser(this.loggedUser) != null) {
-      this.loggedUser = this.userService.getUser(this.loggedUser);
+    if(this.userService.getUser() != null) {
+      alert("로그인 시도");
     } else {
+      alert("로그인에 실패하였습니다.");
       return false;
     }
-
-    // 부모에게 데이터를 전달하기 위해 EventEmitter객체를 통해 emit한다.
-    this.parentEmitter.emit(this.loggedUser);
-    console.log(this.loggedUser);
 
     // 모달창을 닫는다.
     this.modalRef.close();

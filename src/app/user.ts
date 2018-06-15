@@ -13,18 +13,7 @@ export class User {
   private _modDt: string;
 
   constructor() {
-    this._userSeq = 0;
-    this._userId = 'admin';
-    this._userPw = 'admin';
-    this._name = '전도체';
-    this._gender = '남';
-    this._email = 'a@naver.com';
-    this._birth = '2018-06-08';
-    this._address = '서울시';
-    this._regSeq = 0;
-    this._regDt = '2018-06-11';
-    this._modSeq = 0;
-    this._modDt = '2018-06-11';
+
   }
 
   get userSeq(): number {
