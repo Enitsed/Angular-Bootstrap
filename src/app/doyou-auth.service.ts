@@ -24,7 +24,8 @@ export class DoyouAuthService {
       // TODO : 서버에서 유저 정보를 세션에 저장하는데
       // 앵귤러에서 어떻게 세션정보를 가져오는지 모름. 대충 찾아보니
       // 다른 세션 스토리지에 접근할 수 있는 모듈이 따로 있는 모양.
-      console.log(response);
+      this.user = response["user"];
+      console.log(this.user);
     }, error => {
       alert("서버 접속 실패");
       console.log(error);
@@ -45,6 +46,7 @@ export class DoyouAuthService {
     const body = new HttpParams().set('userId', user.userId).set('userPw', user.userPw).set('name', user.name).set('gender', user.gender).set('birth', user.birth).set('email', user.email).set('address', user.address);
     this.httpService.post('http://localhost:8081/join/userJoin', body, { observe: 'response' }).subscribe(response => {
       console.log(response);
+
       if(response.status == 200){
         console.log(response);
         alert("회원가입 성공");

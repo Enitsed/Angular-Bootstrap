@@ -1,15 +1,15 @@
 <div class="header">
-  <div class="btn-group fixed-top justify-content-center" *ngIf="userService.isLogged == false">
+  <div class="btn-group fixed-top justify-content-center" *ngIf="isLogged == false">
     <button class="btn" (click)="openModal('login')">로그인</button>
     <button class="btn" (click)="openModal('find')">아이디 찾기</button>
     <button class="btn" (click)="openModal('join')">회원 가입</button>
   </div>
-  <div class="btn-group fixed-top justify-content-center" *ngIf="userService.isLogged == true">
+  <div class="btn-group fixed-top justify-content-center" *ngIf="isLogged == true">
     <button class="btn" (click)="logout()">로그아웃</button>
   </div>
   <a routerLink="main">
-    <h2 class="text-lg-left" *ngIf="userService.user != null && userService.isLogged == true">{{ this.userService.user.name }} 님 어서오세요.</h2>
-    <h2 class="text-lg-left" *ngIf="userService.user == null || userService.isLogged == false">Crewmate</h2>
+    <h2 class="text-lg-left" *ngIf="user != null && isLogged == true">{{ user.name }} 님 어서오세요.</h2>
+    <h2 class="text-lg-left" *ngIf="user == null || isLogged == false">Crewmate</h2>
   </a>
   <app-doyou-navbar></app-doyou-navbar>
 </div>

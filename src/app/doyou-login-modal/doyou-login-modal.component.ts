@@ -1,6 +1,5 @@
-import {Component, EventEmitter, Input, OnInit, Output, ViewChild} from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {NgbModal, NgbModalRef} from "@ng-bootstrap/ng-bootstrap";
-import {User} from "../user";
 import {DoyouAuthService} from "../doyou-auth.service";
 
 @Component({
@@ -21,8 +20,6 @@ export class DoyouLoginModalComponent implements OnInit {
   @ViewChild('login')
   modal: NgbModal;
   modalRef: NgbModalRef;
-  userId: string;
-  userPw: string;
 
   // 모달창 활성을 위한 modalService와 유저 인증을 위한 authService를
   // DI를 통해 주입한다.
@@ -36,8 +33,9 @@ export class DoyouLoginModalComponent implements OnInit {
   signIn(){
     // 유저서비스에서 서버와 통신 후 가져오는 유저 값이 없으면 false를 리턴하고,
     // 정상 처리시 유저 정보 반환한다.
-    if(this.userService.getUser() != null) {
-      alert("로그인 시도");
+    this.userService.user = this.userService.getUser();
+    if(this.userService.user != null) {
+      alert("로그인 성공");
     } else {
       alert("로그인에 실패하였습니다.");
       return false;
