@@ -1,3 +1,6 @@
+// 서비스 리스트
+import {DoyouAuthService} from "./doyou-auth.service";
+import {DoyouAlbumService} from "./doyou-album.service";
 // 모듈 리스트
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
@@ -19,9 +22,6 @@ import {DoyouFindModalComponent} from './doyou-find-modal/doyou-find-modal.compo
 import {DoyouJoinModalComponent} from './doyou-join-modal/doyou-join-modal.component';
 import {DoyouAboutStickerboardComponent} from './doyou-about-stickerboard/doyou-about-stickerboard.component'
 import {DoyouWriterComponent} from './doyou-writer/doyou-writer.component'
-// 서비스 리스트
-import {DoyouAuthService} from "./doyou-auth.service";
-import {DoyouAlbumService} from "./doyou-album.service";
 
 // 라우트 경로 설정
 const doYouRoutes: Routes = [
@@ -54,7 +54,7 @@ const doYouRoutes: Routes = [
     RouterModule.forRoot(doYouRoutes),
     NgbModule.forRoot(),
     HttpClientModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [DoyouAuthService, DoyouAlbumService],
   bootstrap: [AppComponent]

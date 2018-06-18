@@ -25,13 +25,15 @@ export class DoyouJoinModalComponent implements OnInit {
   }
 
   joinUser(f: NgForm){
-    this.userService.user.userId = f.value.userId;
-    this.userService.user.userPw = f.value.userPw;
-    this.userService.user.name = f.value.name;
-    this.userService.user.gender = f.value.gender;
-    this.userService.user.email = f.value.email;
-    this.userService.user.address = f.value.address;
-    this.userService.joinUser();
+    let user:User = new User();
+    user.userId = f.value.userId;
+    user.userPw = f.value.userPw;
+    user.name = f.value.name;
+    user.gender = f.value.gender;
+    user.email = f.value.email;
+    user.birth = f.value.birth;
+    user.address = f.value.address;
+    this.userService.joinUser(user);
 
     this.modalRef.close();
   }
