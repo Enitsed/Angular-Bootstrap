@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpParams} from "@angular/common/http";
 import {User} from "./user";
-
+import {Observable} from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
@@ -20,22 +20,19 @@ export class DoyouAuthService {
   // 로그인 요청
   getUser() {
     const body = new HttpParams().set('userId', this.user.userId).set('userPw', this.user.userPw);
-    this.httpService.post('http://localhost:8081/auth/login', body).subscribe(response => {
-      // TODO : 서버에서 유저 정보를 세션에 저장하는데
-      // 앵귤러에서 어떻게 세션정보를 가져오는지 모름. 대충 찾아보니
-      // 다른 세션 스토리지에 접근할 수 있는 모듈이 따로 있는 모양.
+    return this.httpService.post('http://localhost:8081/auth/login', body).subscribe(response => {
+      // TODO : 유저정보를 서버에서 그대로 가져와서 저장하되 서버에서 토큰을 발행하여 인증하는 방식을 사용 (JWT, AuthO ...)
       this.user = response["user"];
       console.log(this.user);
+
+      // 서버로부터 가져온 유저의 시퀀스 값이 있으면 로그인 처리
+      if(this.user.userSeq > 0){
+        this.isLogged = true;
+      }
     }, error => {
       alert("서버 접속 실패");
       console.log(error);
     });
-
-    // 서버로부터 가져온 유저의 시퀀스 값이 있으면 로그인 처리
-    if(this.user.userSeq > 0){
-      this.isLogged = true;
-    }
-    return this.user;
   }
 
   // 회원가입 요청
@@ -58,5 +55,6 @@ export class DoyouAuthService {
     });
   }
 
+  // TODO: 로그아웃 요청
 
 }

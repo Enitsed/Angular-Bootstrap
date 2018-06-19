@@ -4,7 +4,7 @@ import {DoyouJoinModalComponent} from "../doyou-join-modal/doyou-join-modal.comp
 import {DoyouFindModalComponent} from "../doyou-find-modal/doyou-find-modal.component";
 import {User} from "../user";
 import {DoyouAuthService} from "../doyou-auth.service";
-import {Observable} from 'rxjs';
+
 @Component({
   selector: 'app-doyou-header',
   templateUrl: './doyou-header.component.html',
@@ -17,6 +17,8 @@ export class DoyouHeaderComponent implements OnInit {
   findModal: DoyouFindModalComponent;
   @ViewChild(DoyouJoinModalComponent)
   joinModal: DoyouJoinModalComponent;
+  user: User;
+  isLogged: boolean;
 
   constructor(private userService: DoyouAuthService) {
   }
@@ -41,7 +43,7 @@ export class DoyouHeaderComponent implements OnInit {
 
   // 저장되어 있는 유저정보를 비우고 로그아웃 처리한다.
   logout() {
-    this.userService.user = null;
+    this.userService.user = new User();
     this.userService.isLogged = false;
   }
 
