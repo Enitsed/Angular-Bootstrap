@@ -3,6 +3,7 @@ section .container-fluid {
   min-height: 640px;
   background-image: url("https://picsum.photos/2000/800/?1");
   background-repeat: no-repeat;
+  color: #3F3FBF;
 }
 
 /deep/ .carousel-item img {
@@ -14,7 +15,7 @@ section .container-fluid {
   section .container-fluid {
     height: 100%;
     min-height: 700px;
-    background-image: url("https://picsum.photos/400/900/?1");
+    background-image: url("https://picsum.photos/700/900/?1");
     background-repeat: no-repeat;
   }
 

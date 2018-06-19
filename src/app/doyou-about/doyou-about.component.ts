@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {DoyouAuthService} from "../doyou-auth.service";
 
 @Component({
   selector: 'app-doyou-about',
@@ -11,7 +12,7 @@ import { Component, OnInit } from '@angular/core';
  */
 export class DoyouAboutComponent implements OnInit {
   images = [];
-  constructor() { }
+  constructor(private userService: DoyouAuthService) { }
 
   ngOnInit() {
     // 슬라이더 이미지
