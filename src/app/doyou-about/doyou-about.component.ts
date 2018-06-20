@@ -9,6 +9,7 @@ import {DoyouAuthService} from "../doyou-auth.service";
 /*
     About 페이지 필요한 정보 :
     사진, 방명록 내용,... 등
+    TODO : 많음
  */
 export class DoyouAboutComponent implements OnInit {
   images = [];

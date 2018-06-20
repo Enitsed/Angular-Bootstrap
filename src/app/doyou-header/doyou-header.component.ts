@@ -42,6 +42,7 @@ export class DoyouHeaderComponent implements OnInit {
   }
 
   // 저장되어 있는 유저정보를 비우고 로그아웃 처리한다.
+  // TODO :  서버에서 로그아웃 처리. 세션
   logout() {
     this.userService.user = new User();
     this.userService.isLogged = false;
