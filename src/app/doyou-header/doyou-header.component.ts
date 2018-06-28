@@ -1,9 +1,9 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {DoyouLoginModalComponent} from "../doyou-login-modal/doyou-login-modal.component";
-import {DoyouJoinModalComponent} from "../doyou-join-modal/doyou-join-modal.component";
-import {DoyouFindModalComponent} from "../doyou-find-modal/doyou-find-modal.component";
-import {User} from "../user";
-import {DoyouAuthService} from "../doyou-auth.service";
+import {DoyouLoginModalComponent} from '../doyou-login-modal/doyou-login-modal.component';
+import {DoyouJoinModalComponent} from '../doyou-join-modal/doyou-join-modal.component';
+import {DoyouFindModalComponent} from '../doyou-find-modal/doyou-find-modal.component';
+import {User} from '../user';
+import {DoyouAuthService} from '../doyou-auth.service';
 import {Observable} from 'rxjs';
 @Component({
   selector: 'app-doyou-header',
