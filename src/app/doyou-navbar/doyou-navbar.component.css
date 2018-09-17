@@ -1,6 +1,9 @@
 nav .collapse ul.nav li {
   margin: 2px;
   font-family: 'Nanum Pen Script', cursive;
+  background-color: cornsilk;
+  border: 1px solid #CDEFDF;
+  border-radius: 5px;
 }
 
 nav .collapse ul.nav li.active {
@@ -35,6 +38,7 @@ nav.navbar {
 @media screen and (min-width: 768px) {
   div.collapse {
     position: relative;
-    bottom: -10px;
+    bottom: -190px;
   }
+
 }
